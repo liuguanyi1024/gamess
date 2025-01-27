@@ -1,55 +1,37 @@
-/* 移动端样式 */
-@media (max-width: 768px) {
-    .game-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #game-board {
-        width: 100vw !important;
-        height: 70vh !important;
-    }
-
-    .side-panel {
-        order: 2;
-        width: 100% !important;
-        margin-top: 10px;
-    }
-
-    .mobile-controls {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-        order: 3;
-    }
-
-    .control-group {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .control-btn {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        background: rgba(255,255,255,0.2);
-        color: white;
-        font-size: 24px;
-        touch-action: manipulation;
-    }
-
-    /* 隐藏PC端侧边栏部分元素 */
-    .next-block, .controls {
-        display: none;
-    }
+body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-/* 防止长按菜单 */
-canvas {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
+.game-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#game-board {
+    border: 2px solid #444;
+    background: #000;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.score-box {
+    background: #333;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
 }
