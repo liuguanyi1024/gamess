@@ -1,0 +1,106 @@
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* 游戏网格布局 */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 游戏卡片容器 */
+.game-card {
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 动态缩略图区域 */
+.thumbnail {
+    width: 100% !important;  /* 覆盖默认尺寸 */
+    height: 70% !important;
+    position: relative;
+    background: #2ecc71;  /* 备用背景色 */
+}
+
+/* 悬停时暂停动画 */
+.game-card:hover canvas {
+    animation-play-state: paused;
+}
+
+/* 缩略图覆盖层 */
+.thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.2em;
+    pointer-events: none;  /* 防止覆盖层拦截点击 */
+}
+
+.game-card:hover .thumbnail-overlay {
+    opacity: 1;
+}
+
+/* 游戏标题样式 */
+.game-card h3 {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+/* 即将到来游戏样式 */
+.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.coming-soon h3::after {
+    content: "（即将到来）";
+    font-size: 0.8em;
+    color: #7f8c8d;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+}
