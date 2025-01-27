@@ -4,7 +4,7 @@ let width, height;
 
 // 加载背景图片（关键修改点）
 const bgImage = new Image();
-bgImage.src = 'assets/images/snake/snake-bg.png'; // 你的图片路径
+bgImage.src = 'assets/images/snake/snake-bg.jpg'; // 你的图片路径
 
 // 配置参数
 const config = {
