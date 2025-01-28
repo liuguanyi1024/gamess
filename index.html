@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏中心</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 主标题 -->
+    <h1>前人后者</h1>
+    
+    <!-- 游戏网格容器 -->
+    <div class="game-grid">
+        <!-- 贪吃蛇游戏卡片 -->
+        <a href="games/snake/" class="game-card">
+            <!-- 动态封面 Canvas -->
+            <canvas class="thumbnail" id="snake-preview"></canvas>
+            <h3>贪吃🐔</h3>
+            <div class="thumbnail-overlay">点击开始游戏</div>
+        </a>
+
+        <!-- 其他游戏卡片示例 -->
+        <div class="game-card coming-soon">
+            <div class="thumbnail"></div>
+            <h3>⚡ 俄罗斯方块</h3>
+            <div class="thumbnail-overlay">开发中</div>
+        </div>
+
+        <div class="game-card coming-soon">
+            <div class="thumbnail"></div>
+            <h3>🌟 打砖块</h3>
+            <div class="thumbnail-overlay">开发中</div>
+        </div>
+    </div>
+
+    <!-- 动态封面脚本 -->
+    <script src="preview.js"></script>
+</body>
+</html>
